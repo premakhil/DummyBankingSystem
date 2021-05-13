@@ -1,0 +1,14 @@
+.navbar-brand,.drop-down-icon {
+    color: #fff;
+}
+
+.logo {
+
+    font-family: 'Monoton', cursive;
+    font-size: x-large;
+}
+
+.navbar-nav > li{
+  padding-left:12px;
+  padding-right:12px;
+}
