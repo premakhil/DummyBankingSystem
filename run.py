@@ -8,5 +8,10 @@ def home():
     return render_template('Homepage.html')
 
 
+@app.route('/customers')
+def customers():
+    return render_template('customers.html')
+
+
 if __name__ == '__main__':
     app.run(debug=True)
