@@ -32,14 +32,18 @@ def customers():
     if request.method == 'POST':
         customer_name = request.form.get("fname")
 
-        print(customer_name)
-
         mycursor.execute(
             "SELECT * FROM customer_details WHERE name='"+customer_name+"';")
         customer = mycursor.fetchall()
         return render_template('viewcustomer.html', customer=customer)
 
     return render_template('customers.html', data=data)
+
+
+@app.route('/transfer')
+def transfer():
+
+    return render_template('transfer.html')
 
 
 if __name__ == '__main__':

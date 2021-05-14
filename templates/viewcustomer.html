@@ -25,9 +25,16 @@
             </tr>
             {% endfor %}
         </tbody>
+        
     </table>
 
 
 </div>
+
+<div style="display: flex; justify-content: center; margin-top: 2rem;">
+    <a href="{{url_for('transfer')}}"><button>Transfer cash from this account</button></a>
+</div>
+
+
 
 {% endblock content %}
