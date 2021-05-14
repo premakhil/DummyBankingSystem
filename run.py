@@ -23,11 +23,21 @@ def home():
     return render_template('Homepage.html')
 
 
-@app.route('/customers')
+@app.route('/customers', methods=['GET', 'POST'])
 def customers():
     mycursor.execute("SELECT * FROM customer_details;")
 
     data = mycursor.fetchall()
+
+    if request.method == 'POST':
+        customer_name = request.form.get("fname")
+
+        print(customer_name)
+
+        mycursor.execute(
+            "SELECT * FROM customer_details WHERE name='"+customer_name+"';")
+        customer = mycursor.fetchall()
+        return render_template('viewcustomer.html', customer=customer)
 
     return render_template('customers.html', data=data)
 
