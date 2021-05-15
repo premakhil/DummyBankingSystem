@@ -28,6 +28,19 @@ td {
     margin-top: 4rem;
 }
 
+.table-container-new {
+    display: flex;
+    justify-content: left;
+    
+    margin-top: 3rem;
+    margin-left: 1.5rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
 
 

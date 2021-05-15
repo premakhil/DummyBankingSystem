@@ -2,5 +2,58 @@
 
 {% block content %}
 
+<div class="table-container-new col-xl-6 col-lg-6 col-md-8 col-sm-8 col-4">
+
+    <table>
+        <thead>
+            <tr>
+                <th style="text-align: center;">Customer ID</th>
+                <th style="text-align: center;">Name</th>
+
+                <th style="text-align: center;">Current Account Balance</th>
+            </tr>
+        </thead>
+        <tbody style="background-color: #e4fbff;">
+            {% for row in data %}
+            {% if row[1] != accname %}
+            <tr>
+                <td>{{row[0]}}</td>
+                <td>{{row[1]}}</td>
+
+                <td>{{row[4]}}</td>
+
+            </tr>
+            {% endif %}
+            {% endfor %}
+        </tbody>
+    </table>
+
+
+</div>
+
+<div class="col-xl-6" style="margin-left: 50rem; margin-top: -25rem;">
+
+    <form action="" method="POST">
+        Enter name of recipient: <input type="text" name="rname" style="margin-left: 4.5rem;"> <br>
+
+        Enter amount to be transferred: <input type="number" name="tnum" style="margin-left: 1rem; margin-top: 3rem;">
+        <br>
+        {% if error==1 %}
+        <label for="" style="color: red; margin-top: 3rem;">Account balance insufficient</label><br>
+        {% endif %}
+
+        {% if error==0 %}
+        <label for="" style="color: green; font-size: 20px;margin-top: 3rem;">Transaction successful</label><br>
+
+        {% endif %}
+
+        <input type="submit" style="margin-left: 10rem; margin-top: 3rem;" value="Transfer">
+
+    </form>
+
+</div>
+
+
+
 
 {% endblock content %}

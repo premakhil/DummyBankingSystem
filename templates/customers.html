@@ -1,40 +1,40 @@
 {% extends "layout.html" %}
 
 {% block content %}
-    <div class="table-container">
+<div class="container table-container col-12">
 
-        <table>
-            <thead>
-                <tr>
-                    <th style="text-align: center;">Customer ID</th>
-                    <th style="text-align: center;">Name</th>
-                    <th style="text-align: center;">Age</th>
-                    <th style="text-align: center;">E-mail</th>
-                    <th style="text-align: center;">Current Account Balance</th>
-                </tr>
-            </thead>
-            <tbody style="background-color: #e4fbff;">
-                {% for row in data %}
-                <tr>
-                    <td>{{row[0]}}</td>
-                    <td>{{row[1]}}</td>
-                    <td>{{row[2]}}</td>
-                    <td>{{row[3]}}</td>
-                    <td>{{row[4]}}</td>
-        
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+    <table>
+        <thead>
+            <tr>
+                <th style="text-align: center;">Customer ID</th>
+                <th style="text-align: center;">Name</th>
+                <th style="text-align: center;">Age</th>
+                <th style="text-align: center;">E-mail</th>
+                <th style="text-align: center;">Current Account Balance</th>
+            </tr>
+        </thead>
+        <tbody style="background-color: #e4fbff;">
+            {% for row in data %}
+            <tr>
+                <td>{{row[0]}}</td>
+                <td>{{row[1]}}</td>
+                <td>{{row[2]}}</td>
+                <td>{{row[3]}}</td>
+                <td>{{row[4]}}</td>
 
-        
-    </div>
-    
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 
-    <form method="POST" action="" class="customer-form" style="display: flex; justify-content: center; margin-top: 2rem;">
-        View a Customer: <input type="text" name="fname" placeholder="Enter customer name" style="margin-left: 1rem;">
-        <input type="submit" style="margin-left: 1rem;">
-    </form>
+
+</div>
+
+
+<form method="POST" action="" class="customer-form" style="display: flex; justify-content: center; margin-top: 2rem;">
+    View a Customer: <input type="text" name="fname" placeholder="Enter customer name" style="margin-left: 1rem;">
+    <input type="submit" style="margin-left: 1rem;">
+</form>
 
 
 
