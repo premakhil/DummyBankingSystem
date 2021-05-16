@@ -80,6 +80,10 @@ input::-webkit-inner-spin-button {
 
 }
 
+body {
+    margin: 0;
+}
+
 
 
 
